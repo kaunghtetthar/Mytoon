@@ -83,10 +83,11 @@ class Vlist extends Component {
     }
 
     //2017-11-13T11:00:04+07:00
+    //https://ats-test.pineapplevisionsystems.com/json_violations?after=2018-03-19T08:00:04+07:00
 
     componentWillMount() {
         axios.get(
-          'https://ats-test.pineapplevisionsystems.com/json_violations?after=2018-03-19T08:00:04+07:00' ,
+          'http://localhost/test/ats.json' ,
 {
             headers: {
               'Accept': 'application/json',

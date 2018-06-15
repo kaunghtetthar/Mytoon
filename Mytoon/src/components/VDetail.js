@@ -56,36 +56,30 @@ const VDetail = ( {album} ) => {
 
 
     const { id,
-        timestamp,
+        time,
         date,
-        thumbnail_image,
-        plate_number,
-        violation_type,
-        evidence,
-        brand,
-        color,
-        vehicle_type, plate_province } = album;
+        url,
+        image,
+        number,
+        thumbnail_image } = album;
 
         // const delete = () => {
         //     return delete(id);
         //   };
 
-    const API_DATE = timestamp.slice(' ', 10);
-    const API_TIME1 = timestamp.slice(11);
-    const API_TIME = API_TIME1.slice('',11);
+     const API_DATE = date;
+     // const API_TIME1 = timestamp.slice(11);
+     const API_TIME = time;
 
 
 
-    const lego = violation_type.includes('RL');
+    // const lego = violation_type.includes('RL');
     // To recogize the 'Violation_type'
     // String if RT show RT logo or SP show Speed logo
     //str.includes('To be');
 
     const mainurl = 'https://ats-test.pineapplevisionsystems.com';
 
-    const [ group_en ] = evidence;
-
-    const {url} = evidence[1];
 
 
     const state = { selectedTab: 'api' };
@@ -133,7 +127,7 @@ const VDetail = ( {album} ) => {
 
 
       <View style={StyleSheet.container}>
-      <Card onPress={() => Actions.Violation({ Violation_id: id } )}>
+      <Card onPress={() => Actions.pdf()}>
            <CardSection >
 
 
@@ -146,21 +140,17 @@ const VDetail = ( {album} ) => {
            <CardSection>
                <Image
                    style={styles.thumbnailStyle}
-                   source={Logo()}
+                   source={require('./assets/RL_logo.png')}
                />
 
                <Text>{API_DATE}{'\n'}{API_TIME}</Text>
 
                </CardSection>
 
-               <Text style={{width : 130, height : 50}}>
-               {brand} / {color} {'\n'}{vehicle_type}
-               </Text>
+
                <Button onPress={() =>
                    Actions.Violation({ Violation_id: id } )
                }>
-                   {plate_number}  {'\n'}
-                   {plate_province}
 
                </Button>
            </View>

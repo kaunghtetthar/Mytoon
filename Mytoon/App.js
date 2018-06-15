@@ -16,7 +16,7 @@ import SignOut from './src/components/SignOut';
 import manual_ticket from './src/components/common/manual_ticket';
 import manual_warning from './src/components/common/manual_warning';
 import Ticketlist from './src/components/Ticketlist';
-
+import pdf from './src/components/pdf';
 
 // const VDLView = requireNativeComponent('VDLView', null)
 //
@@ -86,6 +86,7 @@ export default class App extends React.Component {
                             <Scene key="manual_warning"  component={manual_warning} title="Warning"  />
                             <Scene key="Ticketlist"  component={Ticketlist} title="Ticketlist"  />
                             <Scene key="Tab"  component={Tab} title="Back" hideNavBar={true} />
+                            <Scene key="pdf" component={pdf} title="PDF"  />
                             <Scene key="go"  component={go} title="go"  />
                         </Scene>
 
