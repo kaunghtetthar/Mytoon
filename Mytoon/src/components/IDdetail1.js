@@ -8,7 +8,6 @@ import {Card, Button, CardSection, Spinner, CardScroll} from './common';
 import TabNavigator from 'react-native-tab-navigator';
 import {Actions} from 'react-native-router-flux';
 import {Router, Scene} from 'react-native-router-flux';
-import AlbumList from './AlbumList';
 import ImageZoom from 'react-native-image-pan-zoom';
 
 

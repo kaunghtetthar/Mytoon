@@ -4,7 +4,6 @@ import React, {Component} from 'react';
 import { Alert, StyleSheet, AsyncStorage, Text, TextInput, TouchableOpacity, View, ListView, Image} from 'react-native';
 import {Actions} from 'react-native-router-flux';
 import { Button, Card, CardSection, Input, Spinner } from './common';
-import AlbumList from './AlbumList';
 import axios from 'axios';
 import Tab from './Tab';
 

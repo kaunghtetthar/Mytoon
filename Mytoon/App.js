@@ -7,7 +7,6 @@ import API from './src/components/API';
 import {Router, Scene, Route, TabBar, Schema, Actions} from 'react-native-router-flux';
 import Authentication from './src/components/Authentication';
 import HomePage from './src/components/HomePage';
-import AlbumList from './src/components/AlbumList';
 import Vlist from './src/components/Vlist';
 import Violation from './src/components/Violation';
 import VlistPage from './src/components/VlistPage';
@@ -76,7 +75,7 @@ export default class App extends React.Component {
                                 component={HomePage}
                                 key='HomePage'
                                 title= 'Violations'
-                                hideNavBar={true}
+
                             />
                             <Scene onRight={()=>Actions.SignOut()}
                                 rightTitle="Sign Out" key="Violation"  component={Violation} title="Violation"  />
@@ -86,7 +85,7 @@ export default class App extends React.Component {
                             <Scene key="manual_warning"  component={manual_warning} title="Warning"  />
                             <Scene key="Ticketlist"  component={Ticketlist} title="Ticketlist"  />
                             <Scene key="Tab"  component={Tab} title="Back" hideNavBar={true} />
-                            <Scene key="pdf" component={pdf} title="PDF"  />
+                            <Scene key="pdf" component={pdf} title="Mytoon"  />
                             <Scene key="go"  component={go} title="go"  />
                         </Scene>
 

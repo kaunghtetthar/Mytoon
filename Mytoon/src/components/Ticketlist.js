@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { ScrollView, View, Text, StyleSheet, Button, TouchableOpacity } from 'react-native';
 import axios from 'axios';
-import AlbumDetail from './AlbumDetail';
 import TabNavigator from 'react-native-tab-navigator';
 import VDetail from './VDetail';
 import {Actions} from 'react-native-router-flux';

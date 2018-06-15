@@ -6,7 +6,6 @@ import {Card, Button, CardSection, Spinner, CardScroll} from './common';
 import TabNavigator from 'react-native-tab-navigator';
 import {Actions} from 'react-native-router-flux';
 import {Router, Scene} from 'react-native-router-flux';
-import AlbumList from './AlbumList';
 // import  Video  from 'react-native-video';
 
 // import Tab from './Tab';

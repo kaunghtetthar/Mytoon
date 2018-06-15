@@ -10,7 +10,6 @@ import {Card, Button, CardSection, Spinner, manual_ticket} from './common';
 import TabNavigator from 'react-native-tab-navigator';
 import {Actions} from 'react-native-router-flux';
 import {Router, Scene} from 'react-native-router-flux';
-import AlbumList from './AlbumList';
 import PTRView from 'react-native-pull-to-refresh';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import PopupDialog, {
@@ -127,9 +126,9 @@ const VDetail = ( {album} ) => {
 
 
       <View style={StyleSheet.container}>
+
       <Card onPress={() => Actions.pdf()}>
            <CardSection >
-
 
            <ScrollView style={styles.image} horizontal pagingEnabled={true}>
 
@@ -150,15 +149,16 @@ const VDetail = ( {album} ) => {
 
                <Button onPress={() =>
                    Actions.Violation({ Violation_id: id } )
-               }>
 
+               }>
+              {"Episode"} {'\n'} {'     '} {  id   }
                </Button>
            </View>
 
            <View style={styles.image} >
 
                <Card>
-                   <Slide/>
+                   <Image style={styles.imageStyle} source={{uri: image}} />
                </Card>
 
                </View>
@@ -168,16 +168,6 @@ const VDetail = ( {album} ) => {
                    <View horizontal>
 
                        <CardSection>
-
-                           <Button onPress={() => Actions.manual_ticket({id : id})}>
-                               {'      '}
-                               <Icon name="ticket" size={20} color="#666"/>
-                               {'      '}
-                           </Button>
-
-                       </CardSection>
-
-                       <CardSection>
                            <Button onPress={() => Actions.manual_warning({ id : id})}>
                                {'      '}
                                <Icon name="comment" size={20} color="#666"/>
@@ -185,13 +175,6 @@ const VDetail = ( {album} ) => {
                            </Button>
                        </CardSection>
 
-                       <CardSection>
-                           <Button onPress={() => Actions.Tab({delete_id : id})}>
-                               {'      '}
-                               <Icon name="trash-o" size={20} color="#666"/>
-                               {'      '}
-                           </Button>
-                       </CardSection>
                    </View>
 
            </ScrollView>
@@ -241,7 +224,7 @@ const styles = StyleSheet.create({
         marginRight: 5
     },
     imageStyle: {
-        height: 130,
+        height: 100,
         flex: 1,
         width: null,
         alignSelf: 'stretch',

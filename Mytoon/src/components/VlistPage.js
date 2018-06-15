@@ -6,7 +6,6 @@ import Violation from './Violation';
 import Tab from './Tab';
 import Vlist from './Vlist';
 import Spinner from './common';
-import AlbumList from './AlbumList';
 
 class VlistPage extends Component {
 

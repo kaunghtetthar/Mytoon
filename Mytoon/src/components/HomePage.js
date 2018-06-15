@@ -4,7 +4,6 @@ import React, {Component} from 'react';
 import {Alert, Image, Text, TouchableOpacity, View, AsyncStorage, StyleSheet } from 'react-native';
 import {Actions} from 'react-native-router-flux';
 import { Button, Card, CardSection, Input, Spinner } from './common';
-import AlbumList from './AlbumList';
 import Tab from './Tab';
 
 class HomePage extends Component {

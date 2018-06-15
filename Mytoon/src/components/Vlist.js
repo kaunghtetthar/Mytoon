@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { ScrollView, View, Text, StyleSheet, Button, TouchableOpacity } from 'react-native';
+import { ScrollView, View, Text, StyleSheet, Button, TouchableOpacity, Image } from 'react-native';
 import axios from 'axios';
-import AlbumDetail from './AlbumDetail';
 import TabNavigator from 'react-native-tab-navigator';
 import VDetail from './VDetail';
 import {Actions} from 'react-native-router-flux';
@@ -33,7 +32,8 @@ class Vlist extends Component {
     this.delete = this._handleDelete.bind(this);
     delete_id = this.props.delete_id;
   }
-  state = { albums: [] };
+  state = { albums: [], albumsi: []};
+
 
   async getToken() {
     try {
@@ -115,7 +115,7 @@ class Vlist extends Component {
           ));
         } else {
           return (
-            this.state.albums.map(album =>
+             this.state.albums.map(album =>
             <VDetail key={album.id} album = {album} props = {this.props.navigation} />
           ));
         }
@@ -128,7 +128,7 @@ class Vlist extends Component {
          setTimeout(()=>{
 
            axios.get(
-             'https://ats-test.pineapplevisionsystems.com/json_violations?after=' + currentDate ,
+             'http://localhost/test/ats.json' ,
    {
                headers: {
                  'Accept': 'application/json',
@@ -146,8 +146,14 @@ class Vlist extends Component {
     render() {
       console.log(this.state);
         return (
+
             <PTRView onRefresh={this._refresh} >
-            <ScrollView>
+
+            <ScrollView style={{marginTop: 50}}>
+                      <Image
+                          style={{width: 380, height: 300}}
+                          source={{uri: 'http://localhost/test/Books/title.png'}}
+                      />
                 {this.renderAlbums()}
             </ScrollView>
 

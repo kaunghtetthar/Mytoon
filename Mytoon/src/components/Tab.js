@@ -4,12 +4,10 @@ import TabNavigator from 'react-native-tab-navigator';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Dimensions, View, Text, AsyncStorage, Image } from 'react-native';
 import LoginForm from './LoginForm';
-import AlbumList from './AlbumList';
 import VlistPage from './VlistPage';
 import Vlist from './Vlist';
 import {Actions} from 'react-native-router-flux';
 import { Button, Card, CardSection, Input, Spinner} from './common';
-import StackNav from './StackNav';
 import FindViolation from './FindViolation';
 import FindTicket from './FindTicket';
 
